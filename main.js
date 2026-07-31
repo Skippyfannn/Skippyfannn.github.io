@@ -167,11 +167,12 @@ function randomBallPosition() {
 }
 
 function playSound(audioElement) {
-  if (!soundOn) return;
+  if (!soundOn || !audioElement) {
+    return;
+  }
+
   audioElement.currentTime = 0;
-  audioElement.play().catch(function () {
-    // Audio may wait for a user interaction in some browsers.
-  });
+  audioElement.play().catch(function () {});
 }
 
 function checkCatch() {
