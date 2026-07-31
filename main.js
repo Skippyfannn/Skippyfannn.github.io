@@ -127,7 +127,6 @@ const gameMessage = document.querySelector("#gameMessage");
 const difficultyRange = document.querySelector("#difficultyRange");
 const difficultyLabel = document.querySelector("#difficultyLabel");
 const catchAudio = document.querySelector("#catchAudio");
-const missAudio = document.querySelector("#missAudio");
 
 let score = 0;
 let misses = 0;
@@ -214,7 +213,6 @@ function gameLoop(timestamp) {
     randomBallPosition();
   } else if (ballY > gameArea.clientHeight) {
     misses += 1;
-    playSound(missAudio);
     updateScoreboard();
     if (misses >= 3) {
       endGame("Game over!");
