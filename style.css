@@ -25,26 +25,29 @@ button, input, select { font: inherit; }
 button { cursor: pointer; }
 
 .site-header {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  gap: 18px;
-  padding: 22px clamp(18px, 5vw, 70px);
-  color: var(--white);
-  background: linear-gradient(120deg, var(--dark-blue), var(--blue));
-}
-.hero {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 22px clamp(18px, 5vw, 70px);
+    color: var(--white);
+    background: linear-gradient(120deg, var(--dark-blue), var(--blue));
+}
+
+.hero {
+    flex: 1;
     text-align: center;
 }
 
+.menu-btn {
+    display: none;  
+    border: 0;
+    color: white;
+    background: transparent;
+    font-size: 1.8rem;
+}
 
 .site-header h1 { margin: 0 0 5px; font-size: clamp(1.7rem, 4vw, 2.7rem); }
 .site-header p { margin: 0; opacity: 0.88; }
-.menu-btn { display: none; border: 0; color: white; background: transparent; font-size: 1.8rem; }
+.menu-btnmenu-btn { display: none; border: 0; color: white; background: transparent; font-size: 1.8rem; }
 
 .main-nav {
   display: flex;
@@ -139,13 +142,6 @@ input, select { width: 100%; border: 2px solid #b8d6ec; border-radius: 10px; pad
 .hand { position: absolute; width: 120px; left: calc(50% - 60px); bottom: 12px; z-index: 5; pointer-events: none; filter: drop-shadow(0 6px 4px rgba(0,0,0,0.25)); }
 .hidden { display: none; }
 .game-message { position: absolute; left: 50%; top: 42%; z-index: 8; transform: translate(-50%, -50%); margin: 0; padding: 14px 22px; border-radius: 999px; color: var(--dark-blue); background: rgba(255,255,255,0.9); font-weight: 800; text-align: center; }
-.cloud { position: absolute; width: 120px; height: 35px; border-radius: 50px; background: rgba(255,255,255,0.75); }
-.cloud::before, .cloud::after { content: ""; position: absolute; border-radius: 50%; background: inherit; }
-.cloud::before { width: 55px; height: 55px; left: 15px; top: -25px; }
-.cloud::after { width: 70px; height: 70px; right: 12px; top: -38px; }
-.cloud-one { left: 8%; top: 15%; animation: cloud-move 15s linear infinite alternate; }
-.cloud-two { right: 8%; top: 28%; transform: scale(0.75); animation: cloud-move 20s linear infinite alternate-reverse; }
-@keyframes cloud-move { to { transform: translateX(80px); } }
 .difficulty-card { display: flex; align-items: center; gap: 15px; margin-top: 18px; padding: 20px; }
 .difficulty-card input { flex: 1; }
 
