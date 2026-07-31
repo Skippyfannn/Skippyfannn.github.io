@@ -1,6 +1,5 @@
 "use strict";
 
-// Page management
 const pages = document.querySelectorAll(".page");
 const navButtons = document.querySelectorAll(".nav-btn");
 const goPageButtons = document.querySelectorAll(".go-page");
@@ -58,7 +57,7 @@ saveGoalBtn.addEventListener("click", function () {
   goalMessage.classList.add("success");
 });
 
-// History timeline using event delegation
+//History timeline
 const historyFacts = {
   "1895": {
     title: "Volleyball is created",
@@ -94,7 +93,7 @@ timeline.addEventListener("click", function (event) {
   historyDetail.innerHTML = "<h3>" + item.dataset.year + ": " + fact.title + "</h3><p>" + fact.text + "</p>";
 });
 
-// Quiz using event delegation
+// Quiz
 const quizOptions = document.querySelector("#quizOptions");
 const quizFeedback = document.querySelector("#quizFeedback");
 
@@ -304,5 +303,3 @@ window.addEventListener("resize", function () {
 
 updateDifficultyLabel();
 resetGame();
-
-// TODO updated by ChatGPT
