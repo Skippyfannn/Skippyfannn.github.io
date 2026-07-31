@@ -33,7 +33,9 @@ button { cursor: pointer; }
   color: var(--white);
   background: linear-gradient(120deg, var(--dark-blue), var(--blue));
 }
-
+.hero {
+    text-align: center;
+}
 
 
 .site-header h1 { margin: 0 0 5px; font-size: clamp(1.7rem, 4vw, 2.7rem); }
